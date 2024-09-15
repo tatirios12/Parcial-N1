@@ -12,14 +12,14 @@ class VentanaContra(QWidget):
          # Aqui iria el cambio de color de la ventana pero nos dio demasiado errores, incluso con la solucion encontrada en internet
          # del anterior ejercicio asi que decidimos no agregarla :(
         
-        # Crear un layout vertical
+        # Creamos un layout vertical
         layout = QVBoxLayout()
         
         # Etiqueta y campo de entrada para la contraseña secreta
         contra_label = QLabel('Ingrese su contraseña super secreta:')
         self.contra_input = QLineEdit()
         
-        # Configurar el campo de texto como entrada de contraseña
+        # Configuraramos el campo de texto como entrada de contraseña
         self.contra_input.setEchoMode(QLineEdit.Password)
         
 
@@ -32,12 +32,12 @@ class VentanaContra(QWidget):
         self.contra_input.returnPressed.connect(self.mostrar_contra) 
         
         
-        # Añadir widgets al layout
+        # Añadimos los widgets al layout
         layout.addWidget(contra_label)
         layout.addWidget(self.contra_input)
         layout.addWidget(submit_button)
         
-        # Establecer el layout de la ventana
+        # Establecemos el layout de la ventana
         self.setLayout(layout)
 
     # Función para manejar la acción del botón
@@ -45,7 +45,7 @@ class VentanaContra(QWidget):
         contra = self.contra_input.text()
         print(f"Contraseña ingresada: {contra}")
 
-# Iniciar la aplicación
+# Iniciamos la aplicación
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ventana = VentanaContra()
