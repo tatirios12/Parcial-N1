@@ -9,7 +9,7 @@ class VentanaMascotas(QWidget):
         self.setWindowTitle('Datos de Mascotas')
         self.setGeometry(100, 100, 400, 300)
         
-        # Crear un layout vertical
+        # Creamos un layout vertical
         layout = QVBoxLayout()
         
        # En los siguientes 3 bloques de codigo lo que haremos sera configurar los label para ingresar los datos de las mascotas    
@@ -43,7 +43,7 @@ class VentanaMascotas(QWidget):
         submit_button.clicked.connect(self.mostrar_mascotas)
         self.mascota3_edad_input.returnPressed.connect(self.mostrar_mascotas) # esta linea siempre es para poder usar la tecla enter
         
-        # Añadir widgets al layout
+        # Añadimos los widgets al layout
         layout.addWidget(mascota1_label)
         layout.addWidget(self.mascota1_nombre)
         layout.addWidget(mascota1_tipo)
@@ -67,7 +67,7 @@ class VentanaMascotas(QWidget):
         
         layout.addWidget(submit_button)
         
-        # Establecer el layout de la ventana
+        # Establecemos el layout de la ventana
         self.setLayout(layout)
 
     # Función para manejar la acción del botón
@@ -80,7 +80,7 @@ class VentanaMascotas(QWidget):
         print(f"Mascota 2: {mascota2}")
         print(f"Mascota 3: {mascota3}")
 
-# Iniciar la aplicación
+# Iniciamos la aplicación
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ventana = VentanaMascotas()
