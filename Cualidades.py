@@ -12,7 +12,7 @@ class VentanaDatosPersonales(QWidget):
         # Crear un layout vertical
         layout = QVBoxLayout()
         
-        # Crear etiquetas y campos de entrada para 10 datos, ya que como seran muchas entradas decidimos hacer mejor un ciclo for|
+        # Creamos etiquetas y campos de entrada para 10 datos, ya que como seran muchas entradas decidimos hacer mejor un ciclo for|
         self.datos = []
         for i in range(1, 11):
             etiqueta = QLabel(f'Dato {i}:')
@@ -27,7 +27,7 @@ class VentanaDatosPersonales(QWidget):
         
         layout.addWidget(submit_button)
         
-        # Establecer el layout de la ventana
+        # Establecemos el layout de la ventana
         self.setLayout(layout)
 
     # Función para manejar la acción del botón
@@ -35,7 +35,7 @@ class VentanaDatosPersonales(QWidget):
         datos = [entrada.text() for entrada in self.datos]
         print(f"Datos ingresados: {datos}")
 
-# Iniciar la aplicación
+# Iniciamos la aplicación
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ventana = VentanaDatosPersonales()
