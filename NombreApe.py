@@ -12,7 +12,7 @@ class VentanaNombreEdad(QWidget):
         self.setGeometry(100, 100, 300, 200)
         self.setStyleSheet('background-color:beige;')
 
-        # Crear un layout vertical
+        # Creamos un layout vertical
         layout = QVBoxLayout()
 
         # Etiquetas para el nombre completo y la edad, sera la plantilla de lo que se mostrara en la ventana
@@ -20,7 +20,7 @@ class VentanaNombreEdad(QWidget):
         self.nombre_label = QLabel('Nombre: Alexander Chicas')
         self.edad_label = QLabel('Edad: 21 años')
 
-        # Crear un combo box para seleccionar el nombre, creamos este combo box para mostrar ambos nombres 
+        # Creamos un combo box para seleccionar el nombre, creamos este combo box para mostrar ambos nombres 
         self.combo_box = QComboBox()
         self.combo_box.addItem('Alexander Chicas')
         self.combo_box.addItem('Tatiana Rios')
@@ -52,12 +52,12 @@ class VentanaNombreEdad(QWidget):
         self.nombre_label.setAlignment(Qt.AlignCenter)
         self.edad_label.setAlignment(Qt.AlignCenter)
 
-        # Añadir widgets al layout
+        # Añadimos los widgets al layout
         layout.addWidget(self.combo_box)
         layout.addWidget(self.nombre_label)
         layout.addWidget(self.edad_label)
 
-        # Establecer el layout de la ventana
+        # Establecemos el layout de la ventana
         self.setLayout(layout)
 
     def cambiar_datos(self):
@@ -73,7 +73,7 @@ class VentanaNombreEdad(QWidget):
             self.nombre_label.setText('Nombre: Tatiana Rios')
             self.edad_label.setText('Edad: 23 años')
 
-# Iniciar la aplicación
+# Iniciamos la aplicación
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ventana = VentanaNombreEdad()
